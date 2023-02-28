@@ -1,0 +1,12 @@
+<div class=child>
+    <div class="job-items">
+            <p class="h3">{{job['position']}}</p>
+            <p><b>Location:</b> {{job['location']}}</p>
+            {% if 'salary' in job %}
+                <p><b>Salary:</b> {{job['salary']}}</p>
+            {% endif %}
+    </div>
+    <div class="button">
+        <button class="apply-btn">Apply</button>
+    </div>
+</div>

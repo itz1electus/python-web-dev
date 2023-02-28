@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?    family=Gloock&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+  <style>
+      h1 {
+          font-size: 40;
+          font-family: 'Gloock', serif;
+          color: rgb(80, 80, 80);
+          text-align: center;
+      }
+
+      #banner {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+      }
+
+      h2 {
+          font-family: 'Gloock', serif;
+          color: rgb(120, 120, 120);
+          text-align: center;
+      }
+
+      .h3 {
+          font-size: 20px;
+          font-family: 'Gloock', serif;
+          color: rgb(120, 120, 120);
+      }
+
+      p {
+          font-family: 'Source Sans Pro', sans-serif;
+          color: black;
+      }
+
+      #container {
+          max-width: 1024px;
+          margin: 0 auto;
+      }
+
+      .child {
+          display: flex;
+          justify-content: space-between;
+          border-color: rgb(120)120, 120);
+          border-width: 1px;
+          border-bottom-style: solid;
+      }
+
+      .apply-btn {
+          background-color: cornflowerblue;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 8px;
+      }
+
+      .button {
+          padding: 50px;
+      }
+      
+  </style>
+</head>
+<body>
+    <div id="container">
+          <h1>{{company_name}} Careers</h1>
+      <img id="banner" src="https://python-web-dev.muphasa.repl.co/static/banner.jpg">
+        <h2>About Jovian</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do              eiusmod tempor incididunt ut labore et dolore magna aliqua. Fusce            ut placerat orci nulla pellentesque dignissim. Ultrices gravida              dictum fusce ut placerat orci nulla. Risus feugiat in ante metus.             Nisl rhoncus mattis rhoncus urna neque viverra justo. Dolor sed              viverra ipsum nunc aliquet bibendum. Sagittis id consectetur                 purus ut faucibus pulvinar. Amet justo donec enim diam vulputate             ut pharetra sit. Tortor id aliquet lectus proin nibh nisl                    condimentum id venenatis. Mollis aliquam ut porttitor leo a.                 Mattis pellentesque id nibh tortor id aliquet lectus proin nibh.             Est placerat in egestas erat imperdiet sed euismod nisi porta.               Velit aliquet sagittis id consectetur purus ut faucibus pulvinar             elementum. Tortor condimentum lacinia quis vel eros donec ac                 odio. Vulputate enim nulla aliquet porttitor lacus. Maecenas                 accumsan lacus vel facilisis volutpat est velit. Lectus proin                nibh nisl condimentum id venenatis a condimentum vitae. Faucibus             turpis in eu mi bibendum neque. Lorem ipsum dolor sit amet                   consectetur adipiscing elit.</p>
+        <h2>Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitems.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
